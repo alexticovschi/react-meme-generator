@@ -9,7 +9,7 @@ function memes(state = [], action) {
             return action.memes;
         default:
             return state;
-    }
+    } 
 }
 
 const rootReducer = combineReducers( { memes });
