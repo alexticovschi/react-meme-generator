@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import MemeItem from './MemeItem';
 import '../styles/index.css';
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
                 <h2>Welcome to the Meme Generator!</h2>
                 {
                     this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => (
-                        <h4 key={index}>{meme.name}</h4>
+                        <MemeItem key={index} meme={meme}/>
                     ))
                 }
                 <div className="meme-button" onClick={() => {
