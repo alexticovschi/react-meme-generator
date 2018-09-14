@@ -1,4 +1,4 @@
 const username = 'AlexTicovschi';
-const password = 'Eccehomofiatlux1';
+const password = 'memepass';
 
 export { username, password };
