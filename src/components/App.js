@@ -13,7 +13,6 @@ class App extends Component {
     }
 
     render() {
-        console.log('[STATE]:',this.state)
         return (
             <div>
                 <h2><u>Welcome to the Meme Generator!</u></h2>
@@ -41,7 +40,12 @@ class App extends Component {
                 
                 {
                     this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => (
-                        <MemeItem key={index} meme={meme}/>
+                        <MemeItem 
+                            key={index} 
+                            meme={meme}
+                            text0={this.state.text0}
+                            text1={this.state.text1}
+                         /> 
                     ))
                 }
                 <div className="meme-button" onClick={() => {
